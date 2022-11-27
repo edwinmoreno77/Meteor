@@ -30,7 +30,6 @@ export const Form = () => {
     codigoPostal: codigoPostal,
     Region: inputRegion,
     comuna: comuna,
-    createdAt: new Date(),
   };
 
   const handleSubmit = (e: any) => {
@@ -39,59 +38,59 @@ export const Form = () => {
   };
 
   return (
-    <div className='p-5 m-5'>
-      <form className="m-5 p-5 form--user" onSubmit={handleSubmit}>
+    <div className="flex justify-center ali drop-shadow-md mx-80">
+      <form className="columns-1 w-full m-9 box-border h-auto drop-shadow-md" onSubmit={handleSubmit}>
         <Input
           label={'Nombres:'}
+          className={'rounded-md p-4 m-1 w-full block bg-cyan-50'}
           type={'text'}
           name={'name'}
           value={name}
           onChange={onInputChange}
           placeholder={'nombres'}
           minLength={2}
-          className={'form-control mb-2'}
         />
         <Input
           label={'Apellido Paterno:'}
+          className={'rounded-md p-4 m-1 w-full block bg-cyan-50'}
           type={'text'}
           name={'lastNameP'}
           value={lastNameP}
           onChange={onInputChange}
-          placeholder={'apellido paterno'}
+          placeholder={'Apellido Paterno'}
           minLength={2}
-          className={'form-control mb-2'}
         />
         <Input
           label={'Apellido Materno:'}
+          className={'rounded-md p-4 m-1 w-full block bg-cyan-50'}
           type={'text'}
           name={'lastNameM'}
           value={lastNameM}
           onChange={onInputChange}
           placeholder={'apellido materno'}
           minLength={2}
-          className={'form-control mb-2'}
         />
         <Input
           label={'Rut:'}
+          className={'rounded-md p-4 m-1 w-full block bg-cyan-50'}
           type={'text'}
           name={'rut'}
           value={rut}
           onChange={onInputChange}
           placeholder={'rut'}
           minLength={2}
-          className={'form-control mb-2'}
         />
         <SelectRegion
+          label={'Region:'}
+          placeholder={'Seleccione Region'}
           name={'inputRegion'}
-          label={'Region'}
           value={inputRegion}
           onChange={onInputChange}
           regiones={regiones}
-          placeholder={'Seleccione Region'}
         />
         <SelectComuna
+          label={'comuna:'}
           name={'comuna'}
-          label={'comuna'}
           value={comuna}
           onChange={onInputChange}
           regiones={regiones}
@@ -100,15 +99,20 @@ export const Form = () => {
         />
         <Input
           label={'Codigo Postal:'}
+          className={'rounded-md p-4 m-1 w-full block bg-cyan-50'}
           type={'text'}
           name={'codigoPostal'}
           value={codigoPostal}
           onChange={onInputChange}
           placeholder={'codigo postal'}
           minLength={2}
-          className={'form-control mb-2'}
         />
-        <button className="btn btn-primary mt-2" type="submit">
+        <button
+          className="transition ease-in-out delay-150 marker px-6 py-3 rounded
+           mt-5 shadow-lg shadow-cyan-500/50  bg-cyan-500 hover:-translate-y-1 
+           hover:scale-110  text-cyan-50 hover:bg-cyan-600 duration-300"
+          type="submit"
+        >
           Crear Usuario
         </button>
       </form>

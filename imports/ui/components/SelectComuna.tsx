@@ -7,7 +7,7 @@ export const SelectComuna = ({ label, onChange, value, regiones, name, placehold
       <label>{label}</label>
       <select
         aria-label="labelSelect"
-        className="form-select mb-2"
+        className="px-4 py-4 rounded bg-cyan-50 w-full block"
         placeholder={placeholder}
         name={name}
         value={value}

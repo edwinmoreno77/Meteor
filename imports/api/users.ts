@@ -10,7 +10,7 @@ export interface User {
   Region: string;
   comuna: string;
   codigoPostal: string;
-  createdAt: Date;
+  createdAt?: Date;
 }
 
 export const UsersCollection = new Mongo.Collection<User>('User');

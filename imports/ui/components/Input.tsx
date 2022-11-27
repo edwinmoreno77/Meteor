@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface InputProps {
-  label: string;
+  label?: string;
   type: string;
   name: string;
   value: string;
@@ -13,7 +13,7 @@ interface InputProps {
 
 export const Input = ({ label, type, name, value, onChange, placeholder, minLength, className }: InputProps) => {
   return (
-    <div className="form-group">
+    <div className="">
       <label htmlFor={name}>{label}</label>
       <input
         className={className}

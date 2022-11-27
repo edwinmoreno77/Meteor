@@ -30,7 +30,7 @@ export const useForm = (initialForm: Form) => {
     if (validName && validLastNameM && validLastNameP && validRegion && validComuna && validCodigoPostal === true) {
       validateRut(user.rut)
         ? UsersCollection.find({ rut: user.rut }).fetch().length === 0
-          ? (UsersCollection.insert(user), onResetForm(), alert('Usuario agregado'))
+          ? ( user.createdAt = new Date(), UsersCollection.insert(user), onResetForm(), alert('Usuario agregado'))
           : alert('El rut ya existe')
         : alert('Rut invalido');
     }
