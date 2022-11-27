@@ -8,12 +8,11 @@ export const SelectComuna = ({ label, onChange, value, regiones, name, placehold
       <select
         aria-label="labelSelect"
         className="px-4 py-4 rounded bg-cyan-50 w-full block"
-        placeholder={placeholder}
         name={name}
         value={value}
         onChange={onChange}
       >
-        <option value={'seleccione'}>Seleccione una comuna</option>
+        <option value={'seleccione'}>{placeholder}</option>
         {regiones.map((region) => {
           if (region.region === inputRegion) {
             return region.comunas.map((comuna, index) => {

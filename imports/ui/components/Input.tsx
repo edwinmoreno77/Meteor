@@ -13,7 +13,7 @@ interface InputProps {
 
 export const Input = ({ label, type, name, value, onChange, placeholder, minLength, className }: InputProps) => {
   return (
-    <div className="">
+    <div className="block">
       <label htmlFor={name}>{label}</label>
       <input
         className={className}
