@@ -25,7 +25,7 @@ export const useForm = (initialForm: Form) => {
     const validLastNameP = user.lastNameP.length > 2 ? true : alert('Ingrese un apellido paterno');
     const validRegion = user.Region != 'seleccione' && user.Region.length > 3 ? true : alert('Ingrese una region');
     const validComuna = user.comuna != 'seleccione' && user.comuna.length > 3 ? true : alert('Ingrese una comuna');
-    const validCodigoPostal = user.codigoPostal.length > 2 ? true : alert('Ingrese un codigo postal');
+    const validCodigoPostal = user.codigoPostal > 2 ? true : alert('Ingrese un codigo postal');
 
     if (validName && validLastNameM && validLastNameP && validRegion && validComuna && validCodigoPostal === true) {
       validateRut(user.rut)

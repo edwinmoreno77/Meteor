@@ -9,7 +9,7 @@ export interface User {
   rut: string;
   Region: string;
   comuna: string;
-  codigoPostal: string;
+  codigoPostal: number|string;
   createdAt?: Date;
 }
 

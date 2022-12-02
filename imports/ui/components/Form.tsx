@@ -32,8 +32,8 @@ export const Form = () => {
     comuna: comuna,
   };
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
     isFormValid(user);
   };
 
@@ -107,7 +107,7 @@ export const Form = () => {
           <Input
             label={'Código Postal:'}
             className={'rounded-md p-4 m-1 w-full block bg-cyan-50'}
-            type={'text'}
+            type={'number'}
             name={'codigoPostal'}
             value={codigoPostal}
             onChange={onInputChange}
